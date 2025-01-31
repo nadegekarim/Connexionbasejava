@@ -1,0 +1,64 @@
+package controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.time.LocalDate;
+
+import bo.Contact;
+
+/**
+ * Servlet implementation class ContactServlet
+ */
+@WebServlet("/ContactServlet")
+public class ContactServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Contact contact = null;
+		String contactId = request.getParameter("contactId");
+		contactId ="123";
+		if ("123".equals(contactId)) {
+		 contact = new Contact(
+		"Karim",
+		 " Nadège",
+		 LocalDate.of(1996, 12, 30),
+		"0668159232",
+		 "https://www.facebook.com/XYZ",
+	   "Développeur",
+		"Fullstack");
+		} else if ("457".equals(contactId)){
+			
+		
+		
+		contact = new Contact(
+				"Doukoure",
+				 " Moustapha",
+				 LocalDate.of(1993, 12, 07),
+				"0663322556",
+				 "https://www.linkedin.com/in/clairemartin",
+	             "Responsable RH",
+	             "Management");
+	}
+	
+		
+	if (contact == null) {
+        request.setAttribute("error", "Aucun contact trouvé pour cet identifiant.");
+        request.getRequestDispatcher("/WEB-INF/jsp/contactError.jsp").forward(request, response);
+    } else {
+        // Si le contact existe, on le transmet à la JSP
+        request.setAttribute("Contact", contact);
+        request.getRequestDispatcher("/WEB-INF/jsp/Contact.jsp").forward(request, response);
+    }
+		
+}		
+		
+
+	
+
+}

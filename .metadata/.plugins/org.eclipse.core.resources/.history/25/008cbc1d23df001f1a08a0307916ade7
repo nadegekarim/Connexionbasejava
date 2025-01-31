@@ -1,0 +1,65 @@
+package controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+import java.util.Random;
+
+/**
+ * Servlet implementation class ServletGame
+ */
+@WebServlet("/ServletGame")
+public class ServletGame extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	//private int randomNombre;
+	
+	/*@Override
+		*public void init() throws ServletException {
+		*    randomNombre = new Random().nextInt(11);
+		*}
+		*/
+ 
+  
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Integer min = (Integer)session.getAttribute("min");
+		Integer max = (Integer)session.getAttribute("max");
+		Integer randomNombre = (Integer)session.getAttribute("randomNombre");
+		Integer compteur = (Integer)session.getAttribute("compteur");
+		try {
+			int nouveauMin = Integer.parseInt(request.getParameter("min"));
+			int nouveauMax = Integer.parseInt(request.getParameter("max"));
+			if (min == null || max == null || nouveauMin != min || nouveauMax != max) {
+				min = nouveauMin;
+				max = nouveauMax;
+				randomNombre =  new Random().nextInt((max - min) + 1) + min; 
+				session.setAttribute("min", min);
+				session.setAttribute("max", max);
+				session.setAttribute("randomNombre", randomNombre);
+				session.setAttribute("compteur", 0);
+				
+			}
+			int UserSaisie = Integer.parseInt(request.getParameter("invite"));
+			compteur = (compteur == null) ? 1 : compteur + 1;
+			session.setAttribute("compteur", compteur);
+			
+			//System.out.println("L'utilisateur a saisi : " + UserSaisie);
+			System.out.println("Tentative N° : " + compteur + " : " + UserSaisie + "(cible : " + randomNombre +")" );
+			if (UserSaisie == randomNombre) {
+				response.sendRedirect("victoire.html");
+			} else {
+				response.sendRedirect("echec.html");
+			}
+		} catch (NumberFormatException e) {
+			response.sendRedirect("index.html");
+		}
+		String Cpt = request.getParameter("compteur");
+		response.getWriter().append("Nombre d'essais : " + Cpt);
+	}
+
+}

@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+</head>
+<body>
+<form action="contactDetails" method="GET">
+        <label for="contactId">Identifiant du contact :</label>
+        <input type="text" id="contactId" name="contactId" required>
+        <input type="submit" value="Consulter">
+ </form>
+ <form action="contactDetails" method="GET">
+<p>Consultation des détails d'un consultant</p>
+<p> Nom : ${contact.nom}</p>
+<p> Prénom : ${contact.prenom}</p>
+<p> Date de naissance : ${contact.datenaissance}</p>
+<p> Télephone : ${contact.telephone}</p>
+<p> Url du réseau social : ${contact.url}</p>
+<p> Poste : ${contact.poste}</p>
+<p> Spécialité : ${contact.specialite}</p>
+</form>
+
+</body>
+</html>

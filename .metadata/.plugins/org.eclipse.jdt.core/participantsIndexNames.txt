@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+C:\Users\Administrateur\eclipse-workspace_nouveau\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3117438366.index
+\DemoSetup\src\main\java
+C:\Users\Administrateur\eclipse-workspace_nouveau\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1837761526.index
+\DemoSetup\src\main\java
+C:\Users\Administrateur\eclipse-workspace_nouveau\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\10739295.index
+\TPConnectedIn\src\main\java
+C:\Users\Administrateur\eclipse-workspace_nouveau\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\490500914.index
+\TPRechercherNombre\src\main\java

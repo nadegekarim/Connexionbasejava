@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Perdu !</title>
+</head>
+<body>
+ <h2>ECHEC</h2>
+ <a href="index.html">Rejouer</a>
+
+
+</body>
+</html>

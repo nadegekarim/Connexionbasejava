@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Perdu !</title>
+
+</head>
+<body>
+ <h2>ECHEC</h2>
+  <p>Nombre d'essais: <span id="compteur"></span></p>
+ <a href="index.html">Rejouer</a>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <form action="ServletParametree" method="get">
+   <input type="text" name="nom">
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consulter un contact</title>
+</head>
+<body>
+<h2>Consulter un contact</h2>
+<form action="contactDetails" method="GET">
+        <label for="contactId">Identifiant du contact :</label>
+        <input type="text" id="id" name="id" required>
+        <input type="submit" value="Consulter">
+    </form>
+</body>
+</html>

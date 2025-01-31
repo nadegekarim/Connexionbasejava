@@ -1,0 +1,28 @@
+package bo;
+
+import java.time.LocalDate;
+
+public class Contact {
+	private String nom;
+	private String prenom;
+	private LocalDate datenaissance;
+	private String telephone;
+	private String url;
+	private String poste;
+	private String specialite;
+	
+	
+	public Contact(String nom, String prenom, LocalDate datenaissance, String telephone, String url, String poste,
+			String specialite) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.datenaissance = datenaissance;
+		this.telephone = telephone;
+		this.url = url;
+		this.poste = poste;
+		this.specialite = specialite;
+	}
+	
+	
+
+}

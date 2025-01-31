@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gagné !</title>
+</head>
+<body>
+ <h2>VICTOIRE</h2>
+ <p>Nombre d'essais: <span id="compteur"></span></p>
+</body>
+</html>

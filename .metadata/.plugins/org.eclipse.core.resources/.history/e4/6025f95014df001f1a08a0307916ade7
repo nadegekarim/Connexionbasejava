@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Devinez le nombre</title>
+</head>
+<body>
+
+<!--<h2>Devinez le nombre (entre 0 et 10) :</h2>
+   <form action="ServletGame" method="POST">
+    <input type="number" name="invite" min="0" max="10" required>
+    <input type="submit" value="Tenter ma chance">
+   </form>
+     -->
+   <h2>Devinez le nombre (entre 0 et 10) :</h2>
+   <form action="ServletGame" method="POST">
+   <label>Min : </label>
+    <input type="number" name="min" Value="0" required>
+    <label>Max : </label>
+    <input type="number" name="max" Value="10" required>
+    <label>Votre tentative :  </label>
+    <input type="number" name="invite" required>
+    <input type="submit" value="Tenter ma chance">
+    
+    <input type="number">
+   </form>
+   
+</body>
+</html>

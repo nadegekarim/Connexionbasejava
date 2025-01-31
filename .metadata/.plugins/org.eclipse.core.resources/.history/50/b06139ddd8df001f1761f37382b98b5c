@@ -1,0 +1,21 @@
+package dal;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+public class ConnexionDAO {
+	
+	public void testConnexion() {
+		try {
+			Context context = new InitialContext();
+			DataSource ds =(DataSource)context.lookup("java:comp/env/admin");
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

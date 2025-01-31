@@ -1,0 +1,42 @@
+package controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.time.LocalDate;
+
+import bo.Contact;
+
+/**
+ * Servlet implementation class ContactServlet
+ */
+@WebServlet("/ContactServlet")
+public class ContactServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 String nom = "Karim";
+		 String prenom = " Nadège";
+		 LocalDate dateNaissance = LocalDate.of(1996, 12, 30);
+		 String telephone = "0668159232";
+		 String url ="https://www.facebook.com/XYZ";
+	    String poste = "Développeur";
+		String specialite = "Fullstack";
+		
+		request.setAttribute("contact", new Contact(nom,prenom,dateNaissance,telephone,url,poste,specialite));
+		
+		request.getRequestDispatcher("/WEB-INF/jsp/Contact.jsp").forward(request, response);
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
