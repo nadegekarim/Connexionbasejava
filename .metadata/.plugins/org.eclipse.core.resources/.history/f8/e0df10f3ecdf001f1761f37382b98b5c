@@ -1,0 +1,15 @@
+package bll;
+
+import java.util.List;
+
+import bo.Contact;
+import dal.ContactDAO;
+
+public class ContactBLL {
+	private ContactDAO dao = new ContactDAO();
+	
+	public List<Contact> consulterContact() {
+		dao.select();
+	}
+
+}

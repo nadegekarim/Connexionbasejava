@@ -1,0 +1,12 @@
+package bll;
+
+import dal.ContactDAO;
+
+public class ContactBLL {
+	private ContactDAO dao = new ContactDAO();
+	
+	public void testConnexion() {
+		dao.testConnexion();
+	}
+
+}
